@@ -1,0 +1,13 @@
+.classAdded {
+  font-size: 20px;
+  color: #d2691e;
+  background-color: #000;
+  border: 2px solid #d2691e;
+}
+
+#idAdded {
+  font-size: 20px;
+  color: #24d21e;
+  background-color: #000;
+  border: 2px solid #24d21e;
+}
