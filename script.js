@@ -1,53 +1,55 @@
-$('#hide').click(function(){
-  $('#hideShow').hide()});
+$('#hideBtn').click(function(){
+  $('.hideShowP').hide()});
 
-$('#show').click(function(){
-  $('#hideShow').show()});
+$('#showBtn').click(function(){
+  $('.hideShowP').show()});
 
-$('#hideDuration').click(function(){
-  $('#click').hide(800)});
+$('#hideDurationBtn').click(function(){
+  $('.hideShowToggleP').hide(800)});
 
-$('#showDuration').click(function(){
-  $('#click').show(800)});
+$('#showDurationBtn').click(function(){
+  $('.hideShowToggleP').show(800)});
 
 $('#toggleBtn').click(function(){
-  $('#toggleP').toggle()});
-
-$('#slideDownP').hide();
-$('#slideDownBtn').click(function(){
-  $('#slideDownP').slideDown('slow', function(){
-    $('#slideDownP').show();
-  })});
+  $('.hideShowToggleP').toggle(800)});
 
 $('#slideUpBtn').click(function(){
-  $('#slideUpP').slideUp('slow', function(){
-    $('#slideUpP').hide();
+  $('#slideP').slideUp('slow', function(){
+    $('#slideP').hide();
+  })});
+
+$('#slideDownBtn').click(function(){
+  $('#slideP').slideDown('slow', function(){
+    $('#slideP').show();
   })});
 
 $('#slideToggleBtn').click(function(){
-  $('#slideToggleP').slideToggle('slow')});
-
-  // $('#fadeP').hide();
-$('#fadeInBtn').click(function(){
-  $('#fadeP').fadeIn('15000', function(){
-    $('#fadeP').show();
-  })});
+  $('#slideP').slideToggle('slow')});
 
 $('#fadeOutBtn').click(function(){
-  $('#fadeP').fadeOut('15000', function(){
+  $('#fadeP').fadeOut('slow', function(){
     $('#fadeP').hide();
+  })});
+
+$('#fadeInBtn').click(function(){
+  $('#fadeP').fadeIn('slow', function(){
+    $('#fadeP').show();
   })});
 
   $('#addClassBtn').click(function(){
     $('#addClassP').addClass('classAdded');
   });
 
+  $('#rmClassBtn').click(function(){
+    $('#addClassP').removeClass('classAdded');
+  });
+
   $('#beforeBtn').click(function(){
-    $('#beforeP').before("<p class='classAdded'>This is a paragraph added before the original paragraph...</p>");
+    $('#beforeAfterP').before("<p class='classAdded'>This is a paragraph added before the original paragraph...</p>");
   });
 
   $('#afterBtn').click(function(){
-    $('#afterP').after("<p class='classAdded'>This is a paragraph added after the original paragraph...</p>");
+    $('#beforeAfterP').after("<p class='classAdded'>This is a paragraph added after the original paragraph...</p>");
   });
 
   $('#appendBtn').click(function(){
@@ -63,9 +65,8 @@ $('#fadeOutBtn').click(function(){
   });
 
   $('#valBtn').click(function(){
-    let para = $('#valP').val();
-    console.log(para);
-    $('#addValP').text(para);
+    let color = $('#favColor').val();
+    $('#valP').html(`<span>Your Favorit Color is: </span>${color}`);
   });
 
   $('#textBtn').click(function(){

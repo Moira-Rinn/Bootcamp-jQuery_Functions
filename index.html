@@ -15,175 +15,157 @@
       </header>
       <div id="click">
         <h2>The .click Function</h2>
-        <p>
-          From the documentation:
-          <br />
-          <br />
-          "This method is a shortcut for .on( "click", handler ) in the first
-          two variations, and .trigger( "click" ) in the third. The click event
-          is sent to an element when the mouse pointer is over the element, and
-          the mouse button is pressed and released. Any HTML element can receive
-          this event.
+        <p class="hideShowP">
+          The .click function listens for a click even and then executes a
+          function. In the example below, clicking on the buttons is the click
+          even, and the function calls upon the jQuery functions .hide and
+          .show, respectively. In this instance, this paragraph and the one
+          below will be hidden or shown by targeting the class 'hideShow' which
+          has been assigned to both.
         </p>
-        <p id="hideShow">
-          The .click function is a common function used to call many of the
-          functions below. For example, clicking the buttons below will hide and
-          show this paragraph. Try it!!
+        <p class="hideShowP">
+          Cick the buttons below to hide and show these paragraphs.
         </p>
         <p class="text"></p>
 
-        <button id="hide">Hide it!</button>
-        <button id="show">Show it!</button>
+        <button id="hideBtn">Hide it!</button>
+        <button id="showBtn">Show it!</button>
       </div>
-      <div id="hide">
-        <h2>The .hide Function</h2>
-        <p>
-          The .hide function, as deminstrated above, can simply hide any, or all
-          HTML elements on the page. However, it also possesses other options
-          that can make the process a bit more graceful.
+      <div id="hideShowToggle">
+        <h2>The .hide, .show, & .toggle Functions</h2>
+        <p class="hideShowToggleP">
+          The .hide, .show & .toggle functions, can simply hide anything
+          visible, show anything hidden, or toggle between the two. This works
+          by targeting the HTML element, class, or id of whatever you want to
+          hide.
         </p>
-        <button id="hideDuration">Duration...</button>
-      </div>
-      <div id="show">
-        <h2>The .show Function</h2>
-        <p>
-          The .show function, is the opposite of the .hide function and can be
-          used to reveal hidden elements. Like hide, it also possesses other
-          options that can make the process a bit more graceful.
+        <p class="hideShowToggleP">
+          In this example, these functions have an extra attribute assigned to
+          them, duration, which provides a transition effect, rather than the,
+          "now you see it, now you don't" suddeness of the default above.
         </p>
-        <button id="showDuration">Duration...</button>
-      </div>
-      <div id="toggle">
-        <h2>The .toggle Function</h2>
-        <p id="toggleP">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-          perferendis, numquam dignissimos ipsum consectetur tempora culpa
-          beatae voluptatum, obcaecati, aspernatur odit nisi quidem quae
-          molestias quam. Eligendi, magni? Dolorum, aperiam?
-        </p>
+        <button id="hideDurationBtn">Hide w/ Duration...</button>
+        <button id="showDurationBtn">Show w/ Duration...</button>
         <button id="toggleBtn">Toggle...</button>
       </div>
-      <div id="slideDown">
-        <h2>The .slideDown Function</h2>
-        <p id="slideDownP">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus id
-          nihil eveniet tenetur unde culpa blanditiis ipsum, neque, atque
-          commodi labore necessitatibus ipsam facere nesciunt provident illum
-          magnam perspiciatis error!
-        </p>
-        <button id="slideDownBtn">Slide Down...</button>
-      </div>
-      <div id="slideUp">
-        <h2>The .slideUp Function</h2>
-        <p id="slideUpP">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat,
-          voluptatem asperiores. Laudantium exercitationem possimus veritatis
-          consectetur enim eos ipsa accusamus magni nostrum hic iste maxime,
-          porro cupiditate nobis, voluptatibus placeat!
+
+      <div id="slide">
+        <h2>The . slideUp, .slideDown, & .slideToggle Functions</h2>
+        <p id="slideP">
+          The .slideUp, .slideDown, and .slideToggle are other transition
+          functions that can be paired with different events to achieve
+          different effects. In this instance they are just being used to hide
+          and show, however they can be paired with hover and scrolling events
+          to make certain features appear to accent the user experience.
         </p>
         <button id="slideUpBtn">Slide Up...</button>
-      </div>
-      <div id="slideToggle">
-        <h2>The .slideToggle Function</h2>
-        <p id="slideToggleP">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore modi
-          dicta excepturi ea ipsam repudiandae et ipsa, odio similique. Atque,
-          animi. Vitae asperiores nostrum inventore suscipit aut iste, odit sed.
-        </p>
+        <button id="slideDownBtn">Slide Down...</button>
         <button id="slideToggleBtn">Toggle Slide...</button>
       </div>
+
       <div id="fade">
         <h2>The .fadeIn and .fadeOut Function</h2>
         <p id="fadeP">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non est,
-          asperiores illo nemo itaque dicta optio consectetur voluptates.
-          Voluptatem quidem quas magnam eveniet aut aliquid dolor est quo at.
-          Eveniet.
+          The .fadeIn and .fadeOut are, as might be obvious, fading transitions.
+          Again they add more graceful animation to different aspects of the
+          site which gives it a more professional feel and nice flow. The speed
+          at which things fade, (as with all transition functions) can be
+          regulated to suit the taste of the space.
         </p>
         <button id="fadeOutBtn">Fade Out...</button>
         <button id="fadeInBtn">Fade In...</button>
       </div>
       <div id="addClass">
-        <h2>The .addClass Function</h2>
+        <h2>The .addClass & .removeClass Functions</h2>
         <p id="addClassP">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea placeat
-          veniam, recusandae repellendus magnam accusantium blanditiis facere
-          saepe reiciendis, non, sequi id temporibus soluta aperiam perspiciatis
-          eum adipisci est sunt?
+          The .addClass and .remoeClass functions are a great utility to add and
+          change styling. They allow predefined classes to be added to or
+          remomved from elements, in this case with a click event, but really
+          with any eventlistener. These options present a lot of functionality
+          and utility to really make the site dynamic and interactive.
         </p>
-        <button id="addClassBtn">Add Id...</button>
+        <button id="addClassBtn">Add Class...</button>
+        <button id="rmClassBtn">Remove Class...</button>
       </div>
-      <div id="before">
-        <h2>The .before Function</h2>
-        <p id="beforeP">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo
-          repudiandae qui tempore ipsum reiciendis, deleniti provident aperiam
-          odit nostrum rerum beatae? Perferendis suscipit in omnis est.
-          Repudiandae sit at id.
+      <div id="beforeAfter">
+        <h2>The .before and .after Functions</h2>
+        <p id="beforeAfterP">
+          The .before and .after functions do pretty much what you would expect,
+          they add somethting either before or after the target element. This is
+          useful in certain situations, for example form validation when there
+          is a error. It can also make the page more interactive and engaging.
         </p>
         <button id="beforeBtn">Add Before...</button>
-      </div>
-      <div id="after">
-        <h2>The .after Function</h2>
-        <p id="afterP">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quasi
-          eius incidunt ad officiis ullam amet eum id! Accusantium, maiores amet
-          voluptas dignissimos non odio porro doloremque laborum provident
-          perspiciatis?
-        </p>
         <button id="afterBtn">Add After...</button>
       </div>
       <div id="append">
         <h2>The .append Function</h2>
         <p id="appendP">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-          adipisci, molestias assumenda perspiciatis recusandae cumque
-          temporibus eveniet autem, nemo unde cupiditate neque. Magni animi
-          dolor tempora voluptas quam iusto ipsum.
+          The .append Function appends something to the element. It will
+          continue to append that something so long as the eventlistener is
+          triggered. In this instance the click even will continue to add a new
+          sentence to this paragraph as many times as it is clicked.
         </p>
         <button id="appendBtn">Append...</button>
       </div>
       <div id="html">
         <h2>The .html Function</h2>
         <p id="htmlP">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi facere
-          quae aspernatur porro. Nulla obcaecati provident, recusandae, unde
-          deserunt facilis sed quaerat, excepturi adipisci ut iste
-          exercitationem mollitia iure similique.
+          The .html function adds to or alters the elements HTML. Currently you
+          are reading a paragraph element, but by clicking the button below it
+          will change the element into an unordered list. Many other
+          modifications can be made to transmute the page, making it very
+          versital.
         </p>
         <button id="htmlBtn">HTML...</button>
       </div>
       <div id="attr">
         <h2>The .attr Function</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iure
-          corporis eaque, vel neque molestiae aut harum nostrum facere cum vero
-          adipisci, illum laborum repudiandae non impedit voluptatum architecto
-          odit.
+          The .attr, or attribute function modifiies or replaces an attribut of
+          the HTML element. In this instance it adds an ID with a predefined
+          style, but it can be used to change any attribute, which provides a
+          lot of utility in a lot of different instances.
         </p>
         <button id="attrBtn">Attr...</button>
       </div>
       <div id="val">
         <h2>The .val Function</h2>
-        <p id="valP">
-          When the button is clicked, the value (innerHTML or in this case the
-          text of this paragraph) will be saved in a variable and then assigned
-          to the otherwise empty paragrpah element directly below this
-          paragraph...
+        <p>
+          The .val function captures the value of an input element allowing it
+          to be sent or displayed on the page. Here you can choose your favoite
+          color and the button will store it in a variable and print it out
+          below the select box.
         </p>
-        <p id="addValP"></p>
+        <select id="favColor">
+          <option>Red</option>
+          <option>Blue</option>
+          <option>White</option>
+          <option>Black</option>
+          <option>Green</option>
+          <option>Purple</option>
+          <option>Orange</option>
+          <option>Pink</option>
+          <option>Yellow</option>
+          <option>Something Pastel...</option>
+        </select>
+        <p id="valP"></p>
         <button id="valBtn">Val...</button>
       </div>
       <div id="text">
         <h2>The .text Function</h2>
         <p id="textP">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
-          ut impedit iure ex fugiat soluta. Debitis veritatis odit magnam vero
-          neque, dignissimos ipsam voluptate expedita deleniti eum, mollitia,
-          aperiam enim.
+          The .text function allows jQuery to modify the text of the element.
+          This is very helpful to communicate with users to confirm or rebuke
+          their input. It also alows for a more engaging experience by allowing
+          the user to interact with the site via eventlisteners, such as the
+          click even from pressing the button, and having the site respond.
         </p>
         <button id="textBtn">Text...</button>
       </div>
+      <footer>
+        <h4>Page by Sacha Moira Rinn...</h4>
+      </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
